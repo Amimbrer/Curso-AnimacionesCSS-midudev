@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    width: 50vw;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+main {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+/* Progress */
+#progress {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0%;
+    background: red;
+    height: 1em;
+    animation: progress-grow auto linear;
+    animation-timeline: scroll();
+}
+
+@keyframes progress-grow {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}

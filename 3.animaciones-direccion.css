@@ -1,0 +1,47 @@
+img {
+    width: 80px;
+    /* animation-name: mover;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate; */
+
+    /* animation: mover 2s linear infinite both; */
+    animation:
+        mover 2s steps(10) both,
+        agrandar 1s linear 2s both;
+
+    &:hover {
+        animation-play-state: paused;
+        filter: contrast(150%);
+        cursor: progress;
+    }
+}
+
+@keyframes mover {
+    to {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes agrandar {
+    0% {
+        scale: 1;
+    }
+
+    25% {
+        scale: 1.4;
+    }
+
+    50% {
+        scale: 2;
+    }
+
+    75% {
+        scale: 1.6;
+    }
+
+    100% {
+        scale: 2;
+    }
+}
